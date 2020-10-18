@@ -12,25 +12,56 @@ public class User extends AuditModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     @NotNull
     @Column(unique = true)
     private String username;
+
     @NotNull
     private String password;
+
     @NotNull
     private String name;
+
     @NotNull
     private String lastname;
 
-    private Date birthday;
     @NotNull
     @Column(unique = true)
     private String email;
-    private Long phone;
-    private String address;
 
-    @NotNull
+    private Long phone;
+
+    private String address;
     private Boolean active;
+    private Date birthday;
+
+    public String getAddress() {
+        return address;
+    }
+
+    public User setAddress(String address) {
+        this.address = address;
+        return this;
+    }
+
+    public Boolean getActive() {
+        return active;
+    }
+
+    public User setActive(Boolean active) {
+        this.active = active;
+        return this;
+    }
+
+    public Date getBirthday() {
+        return birthday;
+    }
+
+    public User setBirthday(Date birthday) {
+        this.birthday = birthday;
+        return this;
+    }
 
     public Long getId() {
         return id;
@@ -77,14 +108,6 @@ public class User extends AuditModel {
         return this;
     }
 
-    public Date getBirthday() {
-        return birthday;
-    }
-
-    public User setBirthday(Date birthday) {
-        this.birthday = birthday;
-        return this;
-    }
 
     public String getEmail() {
         return email;
@@ -101,24 +124,6 @@ public class User extends AuditModel {
 
     public User setPhone(Long phone) {
         this.phone = phone;
-        return this;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public User setAddress(String address) {
-        this.address = address;
-        return this;
-    }
-
-    public Boolean getActive() {
-        return active;
-    }
-
-    public User setActive(Boolean active) {
-        this.active = active;
         return this;
     }
 
