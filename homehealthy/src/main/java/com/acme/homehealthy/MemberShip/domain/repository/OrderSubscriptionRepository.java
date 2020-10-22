@@ -1,6 +1,6 @@
-package com.acme.blogging.MemberShip.domain.repository;
+package com.acme.homehealthy.MemberShip.domain.repository;
 
-import com.acme.blogging.MemberShip.domain.model.OrderSubscription;
+import com.acme.homehealthy.MemberShip.domain.model.OrderSubscription;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

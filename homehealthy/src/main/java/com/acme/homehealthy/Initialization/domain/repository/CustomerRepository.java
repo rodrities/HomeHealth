@@ -1,6 +1,6 @@
-package com.acme.blogging.Initialization.domain.repository;
+package com.acme.homehealthy.Initialization.domain.repository;
 
-import com.acme.blogging.Initialization.domain.model.Customer;
+import com.acme.homehealthy.Initialization.domain.model.Customer;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

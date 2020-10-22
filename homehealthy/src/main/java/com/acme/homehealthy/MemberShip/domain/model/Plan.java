@@ -1,4 +1,4 @@
-package com.acme.blogging.MemberShip.domain.model;
+package com.acme.homehealthy.MemberShip.domain.model;
 
 import com.sun.istack.NotNull;
 

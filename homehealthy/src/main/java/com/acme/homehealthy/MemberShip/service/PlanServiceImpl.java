@@ -1,9 +1,9 @@
-package com.acme.blogging.MemberShip.service;
+package com.acme.homehealthy.MemberShip.service;
 
-import com.acme.blogging.MemberShip.domain.model.Plan;
-import com.acme.blogging.MemberShip.domain.repository.PlanRepository;
-import com.acme.blogging.MemberShip.domain.service.PlanService;
-import com.acme.blogging.exception.ResourceNotFoundException;
+import com.acme.homehealthy.MemberShip.domain.model.Plan;
+import com.acme.homehealthy.MemberShip.domain.repository.PlanRepository;
+import com.acme.homehealthy.MemberShip.domain.service.PlanService;
+import com.acme.homehealthy.exception.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

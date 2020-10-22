@@ -1,6 +1,6 @@
-package com.acme.blogging.Initialization.domain.service;
+package com.acme.homehealthy.Initialization.domain.service;
 
-import com.acme.blogging.Initialization.domain.model.Collaborator;
+import com.acme.homehealthy.Initialization.domain.model.Collaborator;
 import org.springframework.http.ResponseEntity;
 
 public interface CollaboratorService {

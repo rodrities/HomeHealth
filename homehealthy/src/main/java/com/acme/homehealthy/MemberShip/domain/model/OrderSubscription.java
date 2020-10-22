@@ -1,6 +1,6 @@
-package com.acme.blogging.MemberShip.domain.model;
+package com.acme.homehealthy.MemberShip.domain.model;
 
-import com.acme.blogging.Initialization.domain.model.Customer;
+import com.acme.homehealthy.Initialization.domain.model.Customer;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.sun.istack.NotNull;
 import org.hibernate.annotations.OnDelete;

@@ -1,4 +1,4 @@
-package com.acme.blogging.MemberShip.resource;
+package com.acme.homehealthy.MemberShip.resource;
 
 public class PlanResource {
     private Long id;

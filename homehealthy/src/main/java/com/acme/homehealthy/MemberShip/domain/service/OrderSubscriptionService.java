@@ -1,7 +1,6 @@
-package com.acme.blogging.MemberShip.domain.service;
+package com.acme.homehealthy.MemberShip.domain.service;
 
-import com.acme.blogging.MemberShip.domain.model.OrderSubscription;
-import org.aspectj.weaver.ast.Or;
+import com.acme.homehealthy.MemberShip.domain.model.OrderSubscription;
 import org.springframework.http.ResponseEntity;
 
 public interface OrderSubscriptionService {

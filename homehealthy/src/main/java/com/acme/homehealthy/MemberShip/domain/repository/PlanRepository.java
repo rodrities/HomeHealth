@@ -1,6 +1,6 @@
-package com.acme.blogging.MemberShip.domain.repository;
+package com.acme.homehealthy.MemberShip.domain.repository;
 
-import com.acme.blogging.MemberShip.domain.model.Plan;
+import com.acme.homehealthy.MemberShip.domain.model.Plan;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

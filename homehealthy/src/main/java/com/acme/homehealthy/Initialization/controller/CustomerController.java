@@ -1,12 +1,12 @@
-package com.acme.blogging.Initialization.controller;
+package com.acme.homehealthy.Initialization.controller;
 
-import com.acme.blogging.Initialization.domain.model.Collaborator;
-import com.acme.blogging.Initialization.domain.model.Customer;
-import com.acme.blogging.Initialization.domain.service.CustomerService;
-import com.acme.blogging.Initialization.resource.CollaboratorResource;
-import com.acme.blogging.Initialization.resource.CustomerResource;
-import com.acme.blogging.Initialization.resource.SaveCollaboratorResource;
-import com.acme.blogging.Initialization.resource.SaveCustomerResource;
+import com.acme.homehealthy.Initialization.domain.model.Collaborator;
+import com.acme.homehealthy.Initialization.domain.model.Customer;
+import com.acme.homehealthy.Initialization.domain.service.CustomerService;
+import com.acme.homehealthy.Initialization.resource.CollaboratorResource;
+import com.acme.homehealthy.Initialization.resource.CustomerResource;
+import com.acme.homehealthy.Initialization.resource.SaveCollaboratorResource;
+import com.acme.homehealthy.Initialization.resource.SaveCustomerResource;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;

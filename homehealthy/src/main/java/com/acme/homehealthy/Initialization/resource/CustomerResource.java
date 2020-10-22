@@ -1,4 +1,4 @@
-package com.acme.blogging.Initialization.resource;
+package com.acme.homehealthy.Initialization.resource;
 
 public class CustomerResource {
     private Long id;

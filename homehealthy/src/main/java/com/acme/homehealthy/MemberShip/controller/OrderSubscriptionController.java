@@ -1,10 +1,10 @@
-package com.acme.blogging.MemberShip.controller;
+package com.acme.homehealthy.MemberShip.controller;
 
-import com.acme.blogging.MemberShip.domain.model.OrderSubscription;
-import com.acme.blogging.MemberShip.domain.repository.OrderSubscriptionRepository;
-import com.acme.blogging.MemberShip.domain.service.OrderSubscriptionService;
-import com.acme.blogging.MemberShip.resource.OrderSubscriptionResource;
-import com.acme.blogging.MemberShip.resource.SaveOrderSubscriptionResource;
+import com.acme.homehealthy.MemberShip.domain.model.OrderSubscription;
+import com.acme.homehealthy.MemberShip.domain.repository.OrderSubscriptionRepository;
+import com.acme.homehealthy.MemberShip.domain.service.OrderSubscriptionService;
+import com.acme.homehealthy.MemberShip.resource.OrderSubscriptionResource;
+import com.acme.homehealthy.MemberShip.resource.SaveOrderSubscriptionResource;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;

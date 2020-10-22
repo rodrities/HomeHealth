@@ -1,4 +1,4 @@
-package com.acme.blogging.MemberShip.resource;
+package com.acme.homehealthy.MemberShip.resource;
 
 import com.sun.istack.NotNull;
 

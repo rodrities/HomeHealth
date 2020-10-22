@@ -1,9 +1,9 @@
-package com.acme.blogging.Initialization.service;
+package com.acme.homehealthy.Initialization.service;
 
-import com.acme.blogging.Initialization.domain.model.Customer;
-import com.acme.blogging.Initialization.domain.repository.CustomerRepository;
-import com.acme.blogging.Initialization.domain.service.CustomerService;
-import com.acme.blogging.exception.ResourceNotFoundException;
+import com.acme.homehealthy.Initialization.domain.model.Customer;
+import com.acme.homehealthy.Initialization.domain.repository.CustomerRepository;
+import com.acme.homehealthy.Initialization.domain.service.CustomerService;
+import com.acme.homehealthy.exception.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;

@@ -1,14 +1,14 @@
-package com.acme.blogging.MemberShip.service;
+package com.acme.homehealthy.MemberShip.service;
 
-import com.acme.blogging.Initialization.domain.model.Customer;
-import com.acme.blogging.Initialization.domain.repository.CustomerRepository;
-import com.acme.blogging.MemberShip.domain.model.OrderSubscription;
-import com.acme.blogging.MemberShip.domain.model.Plan;
-import com.acme.blogging.MemberShip.domain.repository.OrderSubscriptionRepository;
-import com.acme.blogging.MemberShip.domain.repository.PlanRepository;
-import com.acme.blogging.MemberShip.domain.service.OrderSubscriptionService;
-import com.acme.blogging.MemberShip.domain.service.PlanService;
-import com.acme.blogging.exception.ResourceNotFoundException;
+import com.acme.homehealthy.Initialization.domain.model.Customer;
+import com.acme.homehealthy.Initialization.domain.repository.CustomerRepository;
+import com.acme.homehealthy.MemberShip.domain.model.OrderSubscription;
+import com.acme.homehealthy.MemberShip.domain.model.Plan;
+import com.acme.homehealthy.MemberShip.domain.repository.OrderSubscriptionRepository;
+import com.acme.homehealthy.MemberShip.domain.repository.PlanRepository;
+import com.acme.homehealthy.MemberShip.domain.service.OrderSubscriptionService;
+import com.acme.homehealthy.MemberShip.domain.service.PlanService;
+import com.acme.homehealthy.exception.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;

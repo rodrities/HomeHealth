@@ -1,6 +1,6 @@
-package com.acme.blogging.Initialization.domain.service;
+package com.acme.homehealthy.Initialization.domain.service;
 
-import com.acme.blogging.Initialization.domain.model.Customer;
+import com.acme.homehealthy.Initialization.domain.model.Customer;
 import org.springframework.http.ResponseEntity;
 
 public interface CustomerService {
