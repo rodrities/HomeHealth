@@ -1,27 +1,3 @@
-<<<<<<< Updated upstream:homehealthy/src/main/java/com/acme/blogging/resource/SaveEmployeeResource.java
-package com.acme.blogging.resource;
-
-import com.sun.istack.NotNull;
-
-import java.util.Date;
-
-public class SaveEmployeeResource {
-    @NotNull
-    private String username;
-    @NotNull
-    private String password;
-    @NotNull
-    private String name;
-    @NotNull
-    private String lastname;
-    private Date birthday;
-    @NotNull
-    private String email;
-    private Long phone;
-
-    private String address;
-    private Boolean active;
-=======
 <<<<<<< Updated upstream:homehealthy/src/main/java/com/acme/homehealthy/resource/SaveEmployeeResource.java
 package com.acme.homehealthy.resource;
 
@@ -156,17 +132,12 @@ public class SaveCustomerResource {
     @NotNull
     @Size(max = 50)
     private String address;
->>>>>>> Stashed changes:homehealthy/src/main/java/com/acme/homehealthy/resource/SaveEmployeeResource.java
 
     public String getUsername() {
         return username;
     }
 
-<<<<<<< Updated upstream:homehealthy/src/main/java/com/acme/blogging/resource/SaveEmployeeResource.java
-    public SaveEmployeeResource setUsername(String username) {
-=======
     public SaveCustomerResource setUsername(String username) {
->>>>>>> Stashed changes:homehealthy/src/main/java/com/acme/homehealthy/resource/SaveEmployeeResource.java
         this.username = username;
         return this;
     }
@@ -175,11 +146,7 @@ public class SaveCustomerResource {
         return password;
     }
 
-<<<<<<< Updated upstream:homehealthy/src/main/java/com/acme/blogging/resource/SaveEmployeeResource.java
-    public SaveEmployeeResource setPassword(String password) {
-=======
     public SaveCustomerResource setPassword(String password) {
->>>>>>> Stashed changes:homehealthy/src/main/java/com/acme/homehealthy/resource/SaveEmployeeResource.java
         this.password = password;
         return this;
     }
@@ -188,11 +155,7 @@ public class SaveCustomerResource {
         return name;
     }
 
-<<<<<<< Updated upstream:homehealthy/src/main/java/com/acme/blogging/resource/SaveEmployeeResource.java
-    public SaveEmployeeResource setName(String name) {
-=======
     public SaveCustomerResource setName(String name) {
->>>>>>> Stashed changes:homehealthy/src/main/java/com/acme/homehealthy/resource/SaveEmployeeResource.java
         this.name = name;
         return this;
     }
@@ -201,36 +164,16 @@ public class SaveCustomerResource {
         return lastname;
     }
 
-<<<<<<< Updated upstream:homehealthy/src/main/java/com/acme/blogging/resource/SaveEmployeeResource.java
-    public SaveEmployeeResource setLastname(String lastname) {
-=======
     public SaveCustomerResource setLastname(String lastname) {
->>>>>>> Stashed changes:homehealthy/src/main/java/com/acme/homehealthy/resource/SaveEmployeeResource.java
         this.lastname = lastname;
         return this;
     }
 
-<<<<<<< Updated upstream:homehealthy/src/main/java/com/acme/blogging/resource/SaveEmployeeResource.java
-    public Date getBirthday() {
-        return birthday;
-    }
-
-    public SaveEmployeeResource setBirthday(Date birthday) {
-        this.birthday = birthday;
-        return this;
-    }
-
-=======
->>>>>>> Stashed changes:homehealthy/src/main/java/com/acme/homehealthy/resource/SaveEmployeeResource.java
     public String getEmail() {
         return email;
     }
 
-<<<<<<< Updated upstream:homehealthy/src/main/java/com/acme/blogging/resource/SaveEmployeeResource.java
-    public SaveEmployeeResource setEmail(String email) {
-=======
     public SaveCustomerResource setEmail(String email) {
->>>>>>> Stashed changes:homehealthy/src/main/java/com/acme/homehealthy/resource/SaveEmployeeResource.java
         this.email = email;
         return this;
     }
@@ -239,11 +182,7 @@ public class SaveCustomerResource {
         return phone;
     }
 
-<<<<<<< Updated upstream:homehealthy/src/main/java/com/acme/blogging/resource/SaveEmployeeResource.java
-    public SaveEmployeeResource setPhone(Long phone) {
-=======
     public SaveCustomerResource setPhone(Long phone) {
->>>>>>> Stashed changes:homehealthy/src/main/java/com/acme/homehealthy/resource/SaveEmployeeResource.java
         this.phone = phone;
         return this;
     }
@@ -252,26 +191,9 @@ public class SaveCustomerResource {
         return address;
     }
 
-<<<<<<< Updated upstream:homehealthy/src/main/java/com/acme/blogging/resource/SaveEmployeeResource.java
-    public SaveEmployeeResource setAddress(String address) {
-        this.address = address;
-        return this;
-    }
-
-    public Boolean getActive() {
-        return active;
-    }
-
-    public SaveEmployeeResource setActive(Boolean active) {
-        this.active = active;
-        return this;
-    }
-}
-=======
     public SaveCustomerResource setAddress(String address) {
         this.address = address;
         return this;
     }
 }
 >>>>>>> Stashed changes:homehealthy/src/main/java/com/acme/homehealthy/Initialization/resource/SaveCustomerResource.java
->>>>>>> Stashed changes:homehealthy/src/main/java/com/acme/homehealthy/resource/SaveEmployeeResource.java

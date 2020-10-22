@@ -1,6 +1,3 @@
-<<<<<<< Updated upstream:homehealthy/src/main/java/com/acme/blogging/domain/model/User.java
-package com.acme.blogging.domain.model;
-=======
 <<<<<<< Updated upstream:homehealthy/src/main/java/com/acme/homehealthy/domain/model/User.java
 package com.acme.homehealthy.domain.model;
 
@@ -135,7 +132,6 @@ public class User extends AuditModel {
 }
 =======
 package com.acme.blogging.Initialization.domain.model;
->>>>>>> Stashed changes:homehealthy/src/main/java/com/acme/homehealthy/domain/model/User.java
 
 import com.sun.istack.NotNull;
 
@@ -143,14 +139,8 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-<<<<<<< Updated upstream:homehealthy/src/main/java/com/acme/blogging/domain/model/User.java
-@Table(name = "users")
-public class User extends AuditModel {
-
-=======
 @Table(name = "customers")
 public class Customer {
->>>>>>> Stashed changes:homehealthy/src/main/java/com/acme/homehealthy/domain/model/User.java
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -182,11 +172,7 @@ public class Customer {
         return address;
     }
 
-<<<<<<< Updated upstream:homehealthy/src/main/java/com/acme/blogging/domain/model/User.java
-    public User setAddress(String address) {
-=======
     public Customer setAddress(String address) {
->>>>>>> Stashed changes:homehealthy/src/main/java/com/acme/homehealthy/domain/model/User.java
         this.address = address;
         return this;
     }
@@ -195,11 +181,7 @@ public class Customer {
         return active;
     }
 
-<<<<<<< Updated upstream:homehealthy/src/main/java/com/acme/blogging/domain/model/User.java
-    public User setActive(Boolean active) {
-=======
     public Customer setActive(Boolean active) {
->>>>>>> Stashed changes:homehealthy/src/main/java/com/acme/homehealthy/domain/model/User.java
         this.active = active;
         return this;
     }
@@ -208,11 +190,7 @@ public class Customer {
         return birthday;
     }
 
-<<<<<<< Updated upstream:homehealthy/src/main/java/com/acme/blogging/domain/model/User.java
-    public User setBirthday(Date birthday) {
-=======
     public Customer setBirthday(Date birthday) {
->>>>>>> Stashed changes:homehealthy/src/main/java/com/acme/homehealthy/domain/model/User.java
         this.birthday = birthday;
         return this;
     }
@@ -221,11 +199,7 @@ public class Customer {
         return id;
     }
 
-<<<<<<< Updated upstream:homehealthy/src/main/java/com/acme/blogging/domain/model/User.java
-    public User setId(Long id) {
-=======
     public Customer setId(Long id) {
->>>>>>> Stashed changes:homehealthy/src/main/java/com/acme/homehealthy/domain/model/User.java
         this.id = id;
         return this;
     }
@@ -234,11 +208,7 @@ public class Customer {
         return username;
     }
 
-<<<<<<< Updated upstream:homehealthy/src/main/java/com/acme/blogging/domain/model/User.java
-    public User setUsername(String username) {
-=======
     public Customer setUsername(String username) {
->>>>>>> Stashed changes:homehealthy/src/main/java/com/acme/homehealthy/domain/model/User.java
         this.username = username;
         return this;
     }
@@ -247,11 +217,7 @@ public class Customer {
         return password;
     }
 
-<<<<<<< Updated upstream:homehealthy/src/main/java/com/acme/blogging/domain/model/User.java
-    public User setPassword(String password) {
-=======
     public Customer setPassword(String password) {
->>>>>>> Stashed changes:homehealthy/src/main/java/com/acme/homehealthy/domain/model/User.java
         this.password = password;
         return this;
     }
@@ -260,11 +226,7 @@ public class Customer {
         return name;
     }
 
-<<<<<<< Updated upstream:homehealthy/src/main/java/com/acme/blogging/domain/model/User.java
-    public User setName(String name) {
-=======
     public Customer setName(String name) {
->>>>>>> Stashed changes:homehealthy/src/main/java/com/acme/homehealthy/domain/model/User.java
         this.name = name;
         return this;
     }
@@ -273,28 +235,16 @@ public class Customer {
         return lastname;
     }
 
-<<<<<<< Updated upstream:homehealthy/src/main/java/com/acme/blogging/domain/model/User.java
-    public User setLastname(String lastname) {
-=======
     public Customer setLastname(String lastname) {
->>>>>>> Stashed changes:homehealthy/src/main/java/com/acme/homehealthy/domain/model/User.java
         this.lastname = lastname;
         return this;
     }
 
-<<<<<<< Updated upstream:homehealthy/src/main/java/com/acme/blogging/domain/model/User.java
-
-=======
->>>>>>> Stashed changes:homehealthy/src/main/java/com/acme/homehealthy/domain/model/User.java
     public String getEmail() {
         return email;
     }
 
-<<<<<<< Updated upstream:homehealthy/src/main/java/com/acme/blogging/domain/model/User.java
-    public User setEmail(String email) {
-=======
     public Customer setEmail(String email) {
->>>>>>> Stashed changes:homehealthy/src/main/java/com/acme/homehealthy/domain/model/User.java
         this.email = email;
         return this;
     }
@@ -303,19 +253,9 @@ public class Customer {
         return phone;
     }
 
-<<<<<<< Updated upstream:homehealthy/src/main/java/com/acme/blogging/domain/model/User.java
-    public User setPhone(Long phone) {
-        this.phone = phone;
-        return this;
-    }
-
-
-}
-=======
     public Customer setPhone(Long phone) {
         this.phone = phone;
         return this;
     }
 }
 >>>>>>> Stashed changes:homehealthy/src/main/java/com/acme/homehealthy/Initialization/domain/model/Customer.java
->>>>>>> Stashed changes:homehealthy/src/main/java/com/acme/homehealthy/domain/model/User.java
