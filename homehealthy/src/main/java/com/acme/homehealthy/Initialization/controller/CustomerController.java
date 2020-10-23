@@ -29,6 +29,7 @@ public class CustomerController {
     @GetMapping("/customer/{customerId}")
     public CustomerResource getCustomerByUsername(@Valid @PathVariable (value = "customerId") Long customerId){
         return convertToResource(customerService.getCustomerById(customerId));
+
     }
 
     @GetMapping("/customers/{username}/{password}")
