@@ -8,10 +8,8 @@ import com.acme.homehealthy.Initialization.resource.SaveEquipamentResource;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
@@ -26,11 +24,30 @@ public class EquipamentController {
     @Autowired
     private ModelMapper mapper;
 
-    @GetMapping("/equipament/{equipamentId}")
+    @GetMapping("/equipaments/{equipamentId}")
     public EquipamentResource getEquipamentByName(@Valid @PathVariable(value = "equipamentId") Long equipamentId) {
         return convertToResource(equipamentService.getEquipamentById(equipamentId));
 
     }
+
+    @PostMapping("/equipaments")
+    public EquipamentResource createEquipament(@Valid @RequestBody SaveEquipamentResource resource) {
+        Equipament equipament = convertToEntity(resource);
+        return convertToResource(equipamentService.CreateEquipament(equipament));
+    }
+
+    @PutMapping("/equipaments/{equipamentId}")
+    public EquipamentResource updateEquipament(@Valid @PathVariable(value = "equipamentId") Long equipamentId,
+                                           @Valid @RequestBody SaveEquipamentResource resource) {
+        Equipament equipament = convertToEntity(resource);
+        return convertToResource(equipamentService.UpdateEquipament(equipamentId, equipament));
+    }
+
+    @DeleteMapping("/equipaments/{name}")
+    public ResponseEntity<?> deleteEquipament(@Valid @PathVariable(value = "name") String name) {
+        return equipamentService.DeleteEquipament(name);
+    }
+
 
     private Equipament convertToEntity(SaveEquipamentResource resource) {
         return mapper.map(resource, Equipament.class);
@@ -39,5 +56,6 @@ public class EquipamentController {
     private EquipamentResource convertToResource(Equipament equipament) {
         return mapper.map(equipament, EquipamentResource.class);
     }
+
 
 }
