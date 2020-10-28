@@ -35,7 +35,7 @@ public class PlanServiceImpl implements PlanService {
     @Override
     public Plan getPlanByName(String name) {
         return planRepository.findPlanByName(name)
-                .orElseThrow(()-> new ResourceNotFoundException("Plan","Name",name));
+                .orElseThrow(() -> new ResourceNotFoundException("Plan", "Name", name));
     }
 
     @Override

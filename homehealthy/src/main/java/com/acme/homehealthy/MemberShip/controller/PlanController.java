@@ -20,7 +20,7 @@ import javax.validation.Valid;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Tag(name = "Plans", description = "MemberShip API")
+@Tag(name = "Plan", description = "Membership API")
 @RestController
 @RequestMapping("api/")
 public class PlanController {

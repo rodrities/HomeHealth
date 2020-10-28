@@ -10,7 +10,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "order_subscriptions")
-public class OrderSubscription {
+public class Subscription {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -38,7 +38,7 @@ public class OrderSubscription {
         return id;
     }
 
-    public OrderSubscription setId(Long id) {
+    public Subscription setId(Long id) {
         this.id = id;
         return this;
     }
@@ -47,7 +47,7 @@ public class OrderSubscription {
         return plan;
     }
 
-    public OrderSubscription setPlan(Plan plan) {
+    public Subscription setPlan(Plan plan) {
         this.plan = plan;
         return this;
     }
@@ -56,7 +56,7 @@ public class OrderSubscription {
         return customer;
     }
 
-    public OrderSubscription setCustomer(Customer customer) {
+    public Subscription setCustomer(Customer customer) {
         this.customer = customer;
         return this;
     }
@@ -65,7 +65,7 @@ public class OrderSubscription {
         return amounthOfMonth;
     }
 
-    public OrderSubscription setAmounthOfMonth(Long amounthOfMonth) {
+    public Subscription setAmounthOfMonth(Long amounthOfMonth) {
         this.amounthOfMonth = amounthOfMonth;
         return this;
     }
@@ -74,7 +74,7 @@ public class OrderSubscription {
         return totalPrice;
     }
 
-    public OrderSubscription setTotalPrice() {
+    public Subscription setTotalPrice() {
         this.totalPrice = plan.getPrice() * amounthOfMonth;
         return this;
     }
