@@ -84,49 +84,4 @@ public class PlanServiceImplIntegrationTest {
                 .isInstanceOf(ResourceNotFoundException.class)
                 .hasMessage(expectedMessage);
     }
-
-
-    //@Test
-    //@DisplayName("When createSubscriptionPlan Without An Existing Customer")
-    //public void whena(){
-    //    //Arrange
-    //
-    //    Plan plan = new Plan();
-    //    plan.setId(1L);
-    //    Mockito.when(customerRepository.findById(1L))
-    //            .thenReturn(Optional.empty());
-    //    Mockito.when(planRepository.findById(1L))
-    //            .thenReturn(Optional.of(plan));
-    //
-    //    //Act
-    //    Subscription subscription = new Subscription();
-    //    subscription.setId(1L);
-    //    Throwable exception = catchThrowable(()-> {
-    //        Subscription saveSubscription = subscriptionService.createOrderSubscription(1L,1L,subscription);
-    //    });
-    //    //Assert
-    //    assertThat(exception)
-    //            .isInstanceOf(ResourceNotFoundException.class)
-    //            .hasMessage(expectedMessage);
-    //}
-//
-    //@Test
-    //@DisplayName("When findSubscriptionPlanById Without An Existing Subscription")
-    //public void whenaa(){
-    //    //Arrange
-    //    String template= "Resource %s not found for %s with value %s";
-    //    Mockito.when(customerRepository.findById(1L))
-    //            .thenReturn(Optional.empty());
-    //    Mockito.when(planRepository.findById(1L))
-    //            .thenReturn(Optional.empty());
-    //    String expectedMessage = String.format(template, "Subscription","Id",1L);
-    //    //Act
-    //    Throwable exception = catchThrowable(()-> {
-    //        Subscription saveSubscription = subscriptionService.getOrderSubscriptionById(1L);
-    //    });
-    //    //Assert
-    //    assertThat(exception)
-    //            .isInstanceOf(ResourceNotFoundException.class)
-    //            .hasMessage(expectedMessage);
-    //}
 }
