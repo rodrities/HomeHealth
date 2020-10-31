@@ -39,6 +39,6 @@ public class SaveReviewResource {
     @NotNull
     @Size(max=70)
     private String description;
-    @Size(max = 30)
+    @Size(max = 100)
     private String detailrevision;
 }
