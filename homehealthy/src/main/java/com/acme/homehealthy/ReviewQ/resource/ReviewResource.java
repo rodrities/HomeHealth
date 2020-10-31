@@ -28,17 +28,17 @@ public class ReviewResource {
         return this;
     }
 
-    public String getDuration() {
-        return duration;
+    public String getdetailrevision() {
+        return detailrevision;
     }
 
-    public ReviewResource setDuration(String duration) {
-        this.duration = duration;
+    public ReviewResource setdetailrevision(String detailrevision) {
+        this.detailrevision = detailrevision;
         return this;
     }
 
     private Long id;
     private String name;
     private String description;
-    private String duration;
+    private String detailrevision;
 }
