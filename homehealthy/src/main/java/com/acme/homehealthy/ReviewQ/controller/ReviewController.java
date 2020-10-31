@@ -48,8 +48,8 @@ public class ReviewController {
     }
 
     @DeleteMapping("/Reviews/{name}")
-    public ResponseEntity<?> deleteReview(@Valid @PathVariable (value = "name") String name){
-        return  ReviewService.deleteReview(name);
+    public ResponseEntity<?> deleteReview(@Valid @PathVariable (value = "id") long id){
+        return  ReviewService.deleteReview(id);
     }
 
     private ReviewResource convertToResource(Review Review){ return mapper.map(Review, ReviewResource.class); }
