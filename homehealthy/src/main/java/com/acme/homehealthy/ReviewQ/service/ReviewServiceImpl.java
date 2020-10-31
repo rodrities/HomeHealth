@@ -48,8 +48,8 @@ public class ReviewServiceImpl implements  ReviewService {
         );
     }
     @Override
-    public ResponseEntity<?> deleteReview(String name) {
-        Review Review = ReviewRepository.findreviewByname(name).orElseThrow(()->new ResourceNotFoundException("Review","name",name));
+    public ResponseEntity<?> deleteReview(long id) {
+        Review Review = ReviewRepository.findById(id).orElseThrow(()->new ResourceNotFoundException("Review","id",id));
         ReviewRepository.delete(Review);
         return ResponseEntity.ok().build();
     }
