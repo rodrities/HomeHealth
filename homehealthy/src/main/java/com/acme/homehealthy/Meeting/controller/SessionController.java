@@ -44,11 +44,12 @@ public class SessionController {
         return convertToResource(sessionService.getSessionByIdAndUserId(customerId, sessionId));
     }
 
-    @PostMapping("/customers/{customerId}/sessions")
+    @PostMapping("/customers/{customerId}/{collaboratorId}/sessions")
     public SessionResource createSession(
             @PathVariable(value = "customerId") Long customerId,
+            @PathVariable(value = "collaboratorId") Long collaboratorId,
             @RequestBody SaveSessionResource resource) {
-        return convertToResource(sessionService.createSession(customerId,
+        return convertToResource(sessionService.createSession(customerId,collaboratorId
                 convertToEntity(resource)));
     }
 

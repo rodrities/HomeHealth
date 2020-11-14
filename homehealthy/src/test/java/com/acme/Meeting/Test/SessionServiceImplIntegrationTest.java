@@ -70,7 +70,7 @@ public class SessionServiceImplIntegrationTest {
         Session session = new Session();
         session.setId(1L);
         Throwable exception = catchThrowable(()-> {
-            Session result = sessionService.createSession(1L,session);
+            Session result = sessionService.createSession(1L,1L,session);
         });
         //Assert
         assertThat(exception)

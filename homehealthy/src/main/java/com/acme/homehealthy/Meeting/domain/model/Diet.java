@@ -1,6 +1,9 @@
 package com.acme.homehealthy.Meeting.domain.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.sun.istack.NotNull;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 import javax.persistence.*;
 
@@ -18,8 +21,13 @@ public class Diet {
     @NotNull
     private String description;
 
-
     private String duration;
+
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "session_id", nullable = false)
+    @OnDelete(action = OnDeleteAction.CASCADE)
+    @JsonIgnore
+    private Session session;
 
     public Long getId() {
         return id;
@@ -59,4 +67,12 @@ public class Diet {
         return this;
     }
 
+    public Session getSession() {
+        return session;
+    }
+
+    public Diet setSession(Session session) {
+        this.session = session;
+        return this;
+    }
 }

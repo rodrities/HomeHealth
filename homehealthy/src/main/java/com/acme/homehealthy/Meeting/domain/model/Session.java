@@ -1,5 +1,6 @@
 package com.acme.homehealthy.Meeting.domain.model;
 
+import com.acme.homehealthy.Initialization.domain.model.Collaborator;
 import com.acme.homehealthy.Initialization.domain.model.Customer;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.sun.istack.NotNull;
@@ -33,6 +34,12 @@ public class Session{
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JsonIgnore
     private Customer customer;
+
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "collaborator_id", nullable = false)
+    @OnDelete(action = OnDeleteAction.CASCADE)
+    @JsonIgnore
+    private Collaborator collaborator;
 
     public Long getId() {
         return id;
@@ -76,6 +83,15 @@ public class Session{
 
     public Session setCustomer(Customer customer) {
         this.customer = customer;
+        return this;
+    }
+
+    public Collaborator getCollaborator() {
+        return collaborator;
+    }
+
+    public Session setCollaborator(Collaborator collaborator) {
+        this.collaborator = collaborator;
         return this;
     }
 }

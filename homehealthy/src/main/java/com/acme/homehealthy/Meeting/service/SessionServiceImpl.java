@@ -1,5 +1,8 @@
 package com.acme.homehealthy.Meeting.service;
 
+import com.acme.homehealthy.Initialization.domain.model.Collaborator;
+import com.acme.homehealthy.Initialization.domain.model.Customer;
+import com.acme.homehealthy.Initialization.domain.repository.CollaboratorRepository;
 import com.acme.homehealthy.Meeting.domain.model.Session;
 import com.acme.homehealthy.Initialization.domain.repository.CustomerRepository;
 import com.acme.homehealthy.Meeting.domain.repository.SessionRepository;
@@ -20,6 +23,9 @@ public class SessionServiceImpl implements SessionService {
     @Autowired
     private CustomerRepository userRepository;
 
+    @Autowired
+    private CollaboratorRepository collaboratorRepository;
+
     @Override
     public Page<Session> getAllSessionsByUserId(Long customerId, Pageable pageable) {
         return sessionRepository.findByCustomerId(customerId, pageable);
@@ -34,13 +40,14 @@ public class SessionServiceImpl implements SessionService {
     }
 
     @Override
-    public Session createSession(Long customerId, Session session) {
-        return userRepository.findById(customerId).map(customer -> {
-            session.setCustomer(customer);
-            return sessionRepository.save(session);
-        })
-                .orElseThrow(() -> new ResourceNotFoundException(
-                        "User", "Id", customerId));
+    public Session createSession(Long customerId, Long collaboratorId, Session session) {
+        Collaborator existingCollaborator = collaboratorRepository.findById(collaboratorId).orElseThrow(()-> new ResourceNotFoundException("Collaborator","Id",collaboratorId));
+        Customer existingCustomer = userRepository.findById(customerId).orElseThrow(() -> new ResourceNotFoundException("Customer","Id",customerId));
+
+        session.setCustomer(existingCustomer);
+        session.setCollaborator(existingCollaborator);
+
+        return sessionRepository.save(session);
     }
 
     @Override

@@ -55,7 +55,7 @@ public class DietServiceImplIntegrationTest {
         Diet diet1 = new Diet();
         diet1.setName("Brocolin");
         Throwable exception = catchThrowable(()-> {
-            Diet result = dietService.createDiet(diet1);
+            Diet result = dietService.createDiet(diet1,1L);
         });
         //Assert
         assertThat(exception)
