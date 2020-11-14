@@ -11,7 +11,7 @@ public interface SessionService {
 
     Session getSessionByIdAndUserId(Long userId, Long sessionId);
 
-    Session createSession(Long userId, Session session);
+    Session createSession(Long userId, Long collaboratorId, Session session);
 
     Session updateSession(Long userId, Long sessionId, Session sessionDetails);
 

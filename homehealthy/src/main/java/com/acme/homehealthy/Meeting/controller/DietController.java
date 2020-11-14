@@ -1,6 +1,7 @@
 package com.acme.homehealthy.Meeting.controller;
 
 import com.acme.homehealthy.Meeting.domain.model.Diet;
+import com.acme.homehealthy.Meeting.domain.repository.DietRepository;
 import com.acme.homehealthy.Meeting.domain.service.DietService;
 import com.acme.homehealthy.Meeting.resource.DietResource;
 import com.acme.homehealthy.Meeting.resource.SaveDietResource;
@@ -23,24 +24,26 @@ public class DietController {
     @Autowired
     private ModelMapper mapper;
 
-    @GetMapping("/Diet/{dietId}")
+    @GetMapping("/diets/{dietId}")
     public DietResource getDietname(@Valid @PathVariable (value = "dietId") Long dietId){
 
         return convertToResource(dietService.getDietById(dietId));
     }
 
 
-    @PostMapping("/diets")
-    public DietResource createDiet(@Valid @RequestBody SaveDietResource resource){
+    @PostMapping("/diets/sessions/{id}")
+    public DietResource createDiet(@Valid @RequestBody SaveDietResource resource,
+                                    @Valid @PathVariable (value = "id") Long id){
         Diet diet = convertToEntity(resource);
-        return convertToResource(dietService.createDiet(diet));
+        return convertToResource(dietService.createDiet(diet,id));
     }
 
-    @PutMapping("/diets/{dietId}")
+    @PutMapping("/diets/{dietId}/{sessionId}")
     public DietResource updateDiet( @Valid @PathVariable (value = "dietId") Long dietId,
-                                            @Valid @RequestBody SaveDietResource resource){
+                                    @Valid @RequestBody SaveDietResource resource,
+                                    @Valid @PathVariable (value = "sessionId") Long sessionId){
         Diet diet = convertToEntity(resource);
-        return convertToResource(dietService.updateDiet(dietId,diet));
+        return convertToResource(dietService.updateDiet(dietId,diet, sessionId));
     }
 
     @DeleteMapping("/diets/{name}")
@@ -48,9 +51,10 @@ public class DietController {
         return  dietService.deleteDiet(name);
     }
 
-
-
-
+    @GetMapping("/diets/sessions/{id}")
+    public DietResource getDietBySessionId(Long id){
+        return convertToResource(dietService.getDietBySessionId(id));
+    }
 
     ////////////////////////
     private Diet convertToEntity(SaveDietResource resource){

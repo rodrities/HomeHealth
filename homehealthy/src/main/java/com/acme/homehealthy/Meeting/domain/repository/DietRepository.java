@@ -9,6 +9,6 @@ import java.util.Optional;
 
 public interface DietRepository extends JpaRepository<Diet,Long> {
     Optional<Diet>findDietByname(String name);
-
+    Optional<Diet>findDietBySession_Id(Long id);
 }
 
