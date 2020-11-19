@@ -39,7 +39,7 @@ public class SessionController {
 
     @GetMapping("/customers/{customerId}/sessions/{sessionId}")
     public SessionResource getSessionByIdAndUser(
-            @PathVariable(name = "userId") Long customerId,
+            @PathVariable(name = "customerId") Long customerId,
             @PathVariable(name = "sessionId") Long sessionId) {
         return convertToResource(sessionService.getSessionByIdAndUserId(customerId, sessionId));
     }
@@ -49,7 +49,7 @@ public class SessionController {
             @PathVariable(value = "customerId") Long customerId,
             @PathVariable(value = "collaboratorId") Long collaboratorId,
             @RequestBody SaveSessionResource resource) {
-        return convertToResource(sessionService.createSession(customerId,collaboratorId
+        return convertToResource(sessionService.createSession(customerId,collaboratorId,
                 convertToEntity(resource)));
     }
 

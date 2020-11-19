@@ -26,7 +26,6 @@ public class DietController {
 
     @GetMapping("/diets/{dietId}")
     public DietResource getDietname(@Valid @PathVariable (value = "dietId") Long dietId){
-
         return convertToResource(dietService.getDietById(dietId));
     }
 
