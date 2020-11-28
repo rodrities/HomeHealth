@@ -36,6 +36,7 @@ public class DietController {
         Page<Diet> diets = dietService.getAllDiets(pageable);
         List<DietResource> resources = diets.stream().map(this::convertToResource).collect(Collectors.toList());
         return new PageImpl<>(resources, pageable, resources.size());
+        
     }
 
     @GetMapping("/diets/{dietId}")
