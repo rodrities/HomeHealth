@@ -3,8 +3,11 @@ package com.acme.homehealthy.Initialization.service;
 import com.acme.homehealthy.Initialization.domain.model.Collaborator;
 import com.acme.homehealthy.Initialization.domain.repository.CollaboratorRepository;
 import com.acme.homehealthy.Initialization.domain.service.CollaboratorService;
+import com.acme.homehealthy.Social.domain.model.Complaint;
 import com.acme.homehealthy.exception.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
@@ -13,6 +16,11 @@ public class CollaboratorServiceImpl implements CollaboratorService {
 
     @Autowired
     private CollaboratorRepository collaboratorRepository;
+
+    @Override
+    public Page<Collaborator> getAllCollaborators(Pageable pageable) {
+        return collaboratorRepository.findAll(pageable);
+    }
 
     @Override
     public Collaborator getCollaboratorById(Long collaboratorId) {

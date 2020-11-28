@@ -28,6 +28,7 @@ public class Collaborator {
     private String email;
 
     private Long phone;
+    private String role;
     private String address;
 
 
@@ -91,6 +92,15 @@ public class Collaborator {
 
     public Collaborator setPhone(Long phone) {
         this.phone = phone;
+        return this;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public Collaborator setRole(String role) {
+        this.role = role;
         return this;
     }
 

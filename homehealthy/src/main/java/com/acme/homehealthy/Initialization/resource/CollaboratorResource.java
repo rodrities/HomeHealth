@@ -9,6 +9,7 @@ public class CollaboratorResource {
     private String lastname;
     private String email;
     private Long phone;
+    private String role;
     private String address;
 
     public Long getId() {
@@ -71,6 +72,15 @@ public class CollaboratorResource {
 
     public CollaboratorResource setPhone(Long phone) {
         this.phone = phone;
+        return this;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public CollaboratorResource setRole(String role) {
+        this.role = role;
         return this;
     }
 

@@ -23,6 +23,8 @@ public class SaveCollaboratorResource {
     @NotNull
     private Long phone;
     @NotNull
+    private String role;
+    @NotNull
     @Size(max = 50)
     private String address;
 
@@ -77,6 +79,15 @@ public class SaveCollaboratorResource {
 
     public SaveCollaboratorResource setPhone(Long phone) {
         this.phone = phone;
+        return this;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public SaveCollaboratorResource setRole(String role) {
+        this.role = role;
         return this;
     }
 

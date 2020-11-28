@@ -1,17 +1,23 @@
 package com.acme.homehealthy.Initialization.controller;
 
-
 import com.acme.homehealthy.Initialization.domain.model.Collaborator;
 import com.acme.homehealthy.Initialization.domain.service.CollaboratorService;
 import com.acme.homehealthy.Initialization.resource.CollaboratorResource;
 import com.acme.homehealthy.Initialization.resource.SaveCollaboratorResource;
+import com.acme.homehealthy.Social.domain.model.Complaint;
+import com.acme.homehealthy.Social.resource.ComplaintResource;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Tag(name = "Collaborators", description = "Initialization API")
 @RestController
@@ -23,6 +29,13 @@ public class CollaboratorController {
 
     @Autowired
     private CollaboratorService collaboratorService;
+
+    @GetMapping("/collaborators")
+    public Page<CollaboratorResource> getAllCollaborators(Pageable pageable){
+        Page<Collaborator> collaborators = collaboratorService.getAllCollaborators(pageable);
+        List<CollaboratorResource> resources = collaborators.stream().map(this::convertToResource).collect(Collectors.toList());
+        return new PageImpl<>(resources, pageable, resources.size());
+    }
 
     @GetMapping("/collaborators/{collaboratorId}")
     public CollaboratorResource getCollaboratorById(@Valid @PathVariable (value = "collaboratorId") Long collaboratorId){
