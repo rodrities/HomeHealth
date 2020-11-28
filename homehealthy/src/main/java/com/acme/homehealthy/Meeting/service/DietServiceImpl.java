@@ -38,6 +38,7 @@ public class DietServiceImpl implements  DietService {
         Session existingSession = sessionRepository.findById(id).orElseThrow(()-> new ResourceNotFoundException("Session","Id",id));
 
         diet.setSession(existingSession);
+
         if(existingDiet != null){
             throw new ResourceNotFoundException("This diet name is begin used");
         }
@@ -48,7 +49,6 @@ public class DietServiceImpl implements  DietService {
     public Diet updateDiet(Long id, Diet diet, Long sessionId) {
         Diet existingDiet = dietRepository.findById(id).orElseThrow(()->new ResourceNotFoundException("Diet","Id",id));
         Session existingSession = sessionRepository.findById(id).orElseThrow(()-> new ResourceNotFoundException("Session","Id",id));
-
 
         return dietRepository.save(
               existingDiet.setName(diet.getName()).setDescription(diet.getDescription()).setDuration(diet.getDuration()).setSession(existingSession)

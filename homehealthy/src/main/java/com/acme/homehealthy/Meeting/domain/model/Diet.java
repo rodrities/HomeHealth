@@ -1,5 +1,5 @@
 package com.acme.homehealthy.Meeting.domain.model;
-
+import com.acme.homehealthy.Meeting.domain.model.Session;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.sun.istack.NotNull;
 import org.hibernate.annotations.OnDelete;
