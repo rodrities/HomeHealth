@@ -1,5 +1,6 @@
 package com.acme.homehealthy.Meeting.service;
 
+import com.acme.homehealthy.Initialization.domain.model.Collaborator;
 import com.acme.homehealthy.Meeting.domain.model.Diet;
 import com.acme.homehealthy.Meeting.domain.model.Session;
 import com.acme.homehealthy.Meeting.domain.repository.DietRepository;
@@ -7,6 +8,8 @@ import com.acme.homehealthy.Meeting.domain.repository.SessionRepository;
 import com.acme.homehealthy.Meeting.domain.service.DietService;
 import com.acme.homehealthy.exception.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
@@ -18,6 +21,11 @@ public class DietServiceImpl implements  DietService {
 
     @Autowired
     private SessionRepository sessionRepository;
+
+    @Override
+    public Page<Diet> getAllDiets(Pageable pageable) {
+        return dietRepository.findAll(pageable);
+    }
 
     @Override
     public Diet getDietById(Long id) {

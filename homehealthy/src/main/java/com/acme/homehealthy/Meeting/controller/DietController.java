@@ -1,5 +1,7 @@
 package com.acme.homehealthy.Meeting.controller;
 
+import com.acme.homehealthy.Initialization.domain.model.Collaborator;
+import com.acme.homehealthy.Initialization.resource.CollaboratorResource;
 import com.acme.homehealthy.Meeting.domain.model.Diet;
 import com.acme.homehealthy.Meeting.domain.repository.DietRepository;
 import com.acme.homehealthy.Meeting.domain.service.DietService;
@@ -9,10 +11,15 @@ import com.acme.homehealthy.Meeting.resource.SaveDietResource;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Tag(name = "Diet", description = "Initialization API")
 @RestController
@@ -24,11 +31,17 @@ public class DietController {
     @Autowired
     private ModelMapper mapper;
 
+    @GetMapping("/diets")
+    public Page<DietResource> getAllDiets(Pageable pageable){
+        Page<Diet> diets = dietService.getAllDiets(pageable);
+        List<DietResource> resources = diets.stream().map(this::convertToResource).collect(Collectors.toList());
+        return new PageImpl<>(resources, pageable, resources.size());
+    }
+
     @GetMapping("/diets/{dietId}")
     public DietResource getDietname(@Valid @PathVariable (value = "dietId") Long dietId){
         return convertToResource(dietService.getDietById(dietId));
     }
-
 
     @PostMapping("/diets/sessions/{id}")
     public DietResource createDiet(@Valid @RequestBody SaveDietResource resource,
