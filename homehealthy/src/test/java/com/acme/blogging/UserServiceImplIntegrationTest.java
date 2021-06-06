@@ -1,6 +1,6 @@
 package com.acme.blogging;
 
-import com.acme.blogging.domain.model.Employee;
+import com.acme.blogging.domain.model.*;
 import com.acme.blogging.domain.model.User;
 import com.acme.blogging.domain.repository.EmployeeRepository;
 import com.acme.blogging.domain.repository.UserRepository;
@@ -45,6 +45,7 @@ public class UserServiceImplIntegrationTest {
             return new UserServiceImpl();
         }
     }
+    //Prueba para agregar un commit del sprint
 
 
     @Test
